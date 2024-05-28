@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RemoteController.Server.HostService;
 using Serilog;
 
 namespace RemoteController.Server
@@ -14,6 +15,8 @@ namespace RemoteController.Server
             {
                 services.AddControllers();
                 services.AddEndpointsApiExplorer();
+                services.AddSingleton<ConnectionsManager>();
+                services.AddHostedService<HostTcpService>();
             }).UseSerilog((context, logger) =>
             {
                 logger.WriteTo.Console();

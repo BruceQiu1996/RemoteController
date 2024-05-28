@@ -1,17 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace RemoteController.Server.Controllers
 {
     public class EquipmentsController : ControllerBase
     {
-        public EquipmentsController()
+        private readonly ILogger<EquipmentsController> _logger;
+        public EquipmentsController(ILogger<EquipmentsController> logger)
         {
-            
+            _logger = logger;
         }
+
+
     }
 }
