@@ -30,7 +30,7 @@
                 <Border Background="#ccc" Margin="5 20" CornerRadius="5">
                     <TextBlock Margin="5" Text="{Binding Id}" FontSize="25"></TextBlock>
                 </Border>
-                <Border Background="#ccc" Margin="5 20">
+                <Border Background="#ccc" Margin="5 20" CornerRadius="5">
                     <TextBlock Margin="5" FontSize="25" Text="{Binding Secret}"></TextBlock>
                 </Border>
             </StackPanel>

@@ -29,6 +29,7 @@ namespace RemoteController.Client
                 service.AddSingleton<MainPage>();
                 service.AddSingleton<MainPageViewModel>();
                 service.AddSingleton<NetHelper>();
+                service.AddSingleton<HttpRequest>();
             });
 
             host = builder.Build();
